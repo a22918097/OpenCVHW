@@ -42,9 +42,12 @@ private slots:
 
     void on_pushButton_NI_clicked();
 
+    void on_pushButton_clear_clicked();
+
 private:
     Ui::MainWindow *ui;
     cv::Mat img;
+    cv::Mat raw;
     void changeColor(const cv::Mat &src,cv::Mat &dst,QVector<int> value);
     QImage Mat2QImage(const cv::Mat src);
     void showImage(const cv::Mat &src);

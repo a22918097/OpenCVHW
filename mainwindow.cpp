@@ -22,6 +22,7 @@ void MainWindow::on_actionLoad_triggered()
     int height = src.rows;
     cv::resize(src,src,cv::Size(width,height));
     this->img = src.clone();
+    this->raw = src.clone();
     this->showImage(this->img);
     ui->horizontalSlider_BLUE->setEnabled(1);
     ui->horizontalSlider_bri->setEnabled(1);
@@ -30,7 +31,14 @@ void MainWindow::on_actionLoad_triggered()
     ui->pushButton_blur->setEnabled(1);
     ui->pushButton_gs->setEnabled(1);
     ui->pushButton_save->setEnabled(1);
-
+    ui->pushButton_NI->setEnabled(1);
+    ui->pushButton_save->setEnabled(1);
+    ui->pushButton_clear->setEnabled(1);
+}
+void MainWindow::on_pushButton_clear_clicked()
+{
+    this->showImage(this->raw);
+    this->img=raw.clone();
 }
 QImage MainWindow::Mat2QImage(const cv::Mat src)
 {
@@ -260,3 +268,5 @@ void MainWindow::on_pushButton_NI_clicked()
         }
         this->showImage(dst);
 }
+
+
