@@ -46,6 +46,8 @@ private slots:
 
     void on_pushButton_load_clicked();
 
+    void on_horizontalSlider_Contrast_valueChanged(int value);
+
 private:
     Ui::MainWindow *ui;
     cv::Mat img;

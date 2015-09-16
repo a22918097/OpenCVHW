@@ -46,6 +46,8 @@ public:
     QPushButton *pushButton_NI;
     QPushButton *pushButton_clear;
     QPushButton *pushButton_load;
+    QSlider *horizontalSlider_Contrast;
+    QLabel *label_4;
     QMenuBar *menuBar;
     QMenu *menuFile;
     QToolBar *mainToolBar;
@@ -149,6 +151,20 @@ public:
         pushButton_load->setEnabled(true);
         pushButton_load->setGeometry(QRect(10, 10, 101, 81));
         pushButton_load->setFont(font2);
+        horizontalSlider_Contrast = new QSlider(centralWidget);
+        horizontalSlider_Contrast->setObjectName(QStringLiteral("horizontalSlider_Contrast"));
+        horizontalSlider_Contrast->setEnabled(true);
+        horizontalSlider_Contrast->setGeometry(QRect(110, 330, 160, 22));
+        horizontalSlider_Contrast->setMinimum(100);
+        horizontalSlider_Contrast->setMaximum(200);
+        horizontalSlider_Contrast->setSingleStep(10);
+        horizontalSlider_Contrast->setPageStep(10);
+        horizontalSlider_Contrast->setValue(100);
+        horizontalSlider_Contrast->setOrientation(Qt::Horizontal);
+        label_4 = new QLabel(centralWidget);
+        label_4->setObjectName(QStringLiteral("label_4"));
+        label_4->setGeometry(QRect(16, 323, 71, 31));
+        label_4->setFont(font);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -186,6 +202,7 @@ public:
         pushButton_NI->setText(QApplication::translate("MainWindow", "NI", 0));
         pushButton_clear->setText(QApplication::translate("MainWindow", "CLEAR", 0));
         pushButton_load->setText(QApplication::translate("MainWindow", "LOAD", 0));
+        label_4->setText(QApplication::translate("MainWindow", "CONTRAST", 0));
         menuFile->setTitle(QApplication::translate("MainWindow", "File", 0));
     } // retranslateUi
 

@@ -299,3 +299,36 @@ void MainWindow::on_pushButton_NI_clicked()
 
 
 
+
+void MainWindow::on_horizontalSlider_Contrast_valueChanged(int value)
+{
+    cv::Mat src = this->img;
+    cv::Mat dst;
+    dst.create(cv::Size(src.cols,src.rows),CV_8UC3);
+
+        for(int i = 0 ;i < this->img.rows ; i++)
+        {
+            for(int j = 0 ;j < this->img.cols ; j++)
+            {
+                for(int k = 0 ;k < this->img.channels() ; k++)
+                {
+                    if(this->img.at<cv::Vec3b>(i,j)[k]*value/100 > 255)
+                    {
+                        dst.at<cv::Vec3b>(i,j)[k] = 255;
+                    }
+                    else if(this->img.at<cv::Vec3b>(i,j)[k]*value/100 < 0)
+                    {
+                        dst.at<cv::Vec3b>(i,j)[k] = 0;
+                    }
+                    else
+                    {
+                        dst.at<cv::Vec3b>(i,j)[k] =
+                                this->img.at<cv::Vec3b>(i,j)[k]*value/100;
+                    }
+
+                }
+            }
+        }
+
+        this->showImage(dst);
+}
