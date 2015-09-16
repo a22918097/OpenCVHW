@@ -55,7 +55,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(1100, 590);
+        MainWindow->resize(1100, 567);
         actionLoad = new QAction(MainWindow);
         actionLoad->setObjectName(QStringLiteral("actionLoad"));
         centralWidget = new QWidget(MainWindow);
@@ -83,7 +83,7 @@ public:
         pushButton_gs = new QPushButton(centralWidget);
         pushButton_gs->setObjectName(QStringLiteral("pushButton_gs"));
         pushButton_gs->setEnabled(false);
-        pushButton_gs->setGeometry(QRect(20, 460, 81, 71));
+        pushButton_gs->setGeometry(QRect(20, 440, 81, 71));
         QFont font1;
         font1.setFamily(QStringLiteral("Agency FB"));
         font1.setPointSize(14);
@@ -124,7 +124,7 @@ public:
         pushButton_blur = new QPushButton(centralWidget);
         pushButton_blur->setObjectName(QStringLiteral("pushButton_blur"));
         pushButton_blur->setEnabled(false);
-        pushButton_blur->setGeometry(QRect(130, 460, 81, 71));
+        pushButton_blur->setGeometry(QRect(130, 440, 81, 71));
         pushButton_blur->setFont(font1);
         pushButton_save = new QPushButton(centralWidget);
         pushButton_save->setObjectName(QStringLiteral("pushButton_save"));
@@ -137,7 +137,7 @@ public:
         pushButton_NI = new QPushButton(centralWidget);
         pushButton_NI->setObjectName(QStringLiteral("pushButton_NI"));
         pushButton_NI->setEnabled(false);
-        pushButton_NI->setGeometry(QRect(240, 460, 81, 71));
+        pushButton_NI->setGeometry(QRect(240, 440, 81, 71));
         pushButton_NI->setFont(font1);
         pushButton_clear = new QPushButton(centralWidget);
         pushButton_clear->setObjectName(QStringLiteral("pushButton_clear"));

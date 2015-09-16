@@ -263,6 +263,8 @@ void MainWindow::on_pushButton_gs_clicked()
             }
         }
         this->showImage(dst);
+
+        this->img = dst.clone();
     }
 }
 void MainWindow::on_pushButton_save_clicked()
