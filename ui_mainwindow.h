@@ -45,6 +45,7 @@ public:
     QPushButton *pushButton_save;
     QPushButton *pushButton_NI;
     QPushButton *pushButton_clear;
+    QPushButton *pushButton_load;
     QMenuBar *menuBar;
     QMenu *menuFile;
     QToolBar *mainToolBar;
@@ -128,7 +129,7 @@ public:
         pushButton_save = new QPushButton(centralWidget);
         pushButton_save->setObjectName(QStringLiteral("pushButton_save"));
         pushButton_save->setEnabled(false);
-        pushButton_save->setGeometry(QRect(20, 10, 101, 81));
+        pushButton_save->setGeometry(QRect(120, 10, 101, 81));
         QFont font2;
         font2.setFamily(QStringLiteral("Agency FB"));
         font2.setPointSize(20);
@@ -141,8 +142,13 @@ public:
         pushButton_clear = new QPushButton(centralWidget);
         pushButton_clear->setObjectName(QStringLiteral("pushButton_clear"));
         pushButton_clear->setEnabled(false);
-        pushButton_clear->setGeometry(QRect(170, 10, 101, 81));
+        pushButton_clear->setGeometry(QRect(230, 10, 101, 81));
         pushButton_clear->setFont(font2);
+        pushButton_load = new QPushButton(centralWidget);
+        pushButton_load->setObjectName(QStringLiteral("pushButton_load"));
+        pushButton_load->setEnabled(true);
+        pushButton_load->setGeometry(QRect(10, 10, 101, 81));
+        pushButton_load->setFont(font2);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -179,6 +185,7 @@ public:
         pushButton_save->setText(QApplication::translate("MainWindow", "SAVE", 0));
         pushButton_NI->setText(QApplication::translate("MainWindow", "NI", 0));
         pushButton_clear->setText(QApplication::translate("MainWindow", "CLEAR", 0));
+        pushButton_load->setText(QApplication::translate("MainWindow", "LOAD", 0));
         menuFile->setTitle(QApplication::translate("MainWindow", "File", 0));
     } // retranslateUi
 

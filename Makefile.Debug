@@ -140,7 +140,56 @@ compiler_rcc_clean:
 compiler_moc_header_make_all: debug\moc_mainwindow.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) debug\moc_mainwindow.cpp
-debug\moc_mainwindow.cpp: ..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\QMainWindow \
+debug\moc_mainwindow.cpp: G:\opencv\build\include\opencv2\opencv.hpp \
+		G:\opencv\build\include\opencv2\core.hpp \
+		G:\opencv\build\include\opencv2\core\cvdef.h \
+		G:\opencv\build\include\opencv2\hal\defs.h \
+		G:\opencv\build\include\opencv2\core\version.hpp \
+		G:\opencv\build\include\opencv2\core\base.hpp \
+		G:\opencv\build\include\opencv2\core\cvstd.hpp \
+		G:\opencv\build\include\opencv2\core\ptr.inl.hpp \
+		G:\opencv\build\include\opencv2\hal.hpp \
+		G:\opencv\build\include\opencv2\core\sse_utils.hpp \
+		G:\opencv\build\include\opencv2\core\traits.hpp \
+		G:\opencv\build\include\opencv2\core\matx.hpp \
+		G:\opencv\build\include\opencv2\core\types.hpp \
+		G:\opencv\build\include\opencv2\core\mat.hpp \
+		G:\opencv\build\include\opencv2\core\bufferpool.hpp \
+		G:\opencv\build\include\opencv2\core\mat.inl.hpp \
+		G:\opencv\build\include\opencv2\core\persistence.hpp \
+		G:\opencv\build\include\opencv2\core\operations.hpp \
+		G:\opencv\build\include\opencv2\core\cvstd.inl.hpp \
+		G:\opencv\build\include\opencv2\core\utility.hpp \
+		G:\opencv\build\include\opencv2\core\core_c.h \
+		G:\opencv\build\include\opencv2\core\types_c.h \
+		G:\opencv\build\include\opencv2\core\optim.hpp \
+		G:\opencv\build\include\opencv2\imgproc.hpp \
+		G:\opencv\build\include\opencv2\imgproc\imgproc_c.h \
+		G:\opencv\build\include\opencv2\imgproc\types_c.h \
+		G:\opencv\build\include\opencv2\photo.hpp \
+		G:\opencv\build\include\opencv2\photo\photo_c.h \
+		G:\opencv\build\include\opencv2\video.hpp \
+		G:\opencv\build\include\opencv2\video\tracking.hpp \
+		G:\opencv\build\include\opencv2\video\background_segm.hpp \
+		G:\opencv\build\include\opencv2\video\tracking_c.h \
+		G:\opencv\build\include\opencv2\features2d.hpp \
+		G:\opencv\build\include\opencv2\flann\miniflann.hpp \
+		G:\opencv\build\include\opencv2\flann\defines.h \
+		G:\opencv\build\include\opencv2\flann\config.h \
+		G:\opencv\build\include\opencv2\objdetect.hpp \
+		G:\opencv\build\include\opencv2\objdetect\detection_based_tracker.hpp \
+		G:\opencv\build\include\opencv2\objdetect\objdetect_c.h \
+		G:\opencv\build\include\opencv2\calib3d.hpp \
+		G:\opencv\build\include\opencv2\core\affine.hpp \
+		G:\opencv\build\include\opencv2\calib3d\calib3d_c.h \
+		G:\opencv\build\include\opencv2\imgcodecs.hpp \
+		G:\opencv\build\include\opencv2\videoio.hpp \
+		G:\opencv\build\include\opencv2\highgui.hpp \
+		G:\opencv\build\include\opencv2\highgui\highgui_c.h \
+		G:\opencv\build\include\opencv2\imgcodecs\imgcodecs_c.h \
+		G:\opencv\build\include\opencv2\videoio\videoio_c.h \
+		G:\opencv\build\include\opencv2\ml.hpp \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\QMainWindow \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qmainwindow.h \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qwidget.h \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtGui\qwindowdefs.h \
@@ -245,55 +294,17 @@ debug\moc_mainwindow.cpp: ..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\QMainWin
 		..\..\..\..\Qt\5.5\msvc2013\include\QtGui\qtouchdevice.h \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qtabwidget.h \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtGui\qicon.h \
-		G:\opencv\build\include\opencv2\opencv.hpp \
-		G:\opencv\build\include\opencv2\core.hpp \
-		G:\opencv\build\include\opencv2\core\cvdef.h \
-		G:\opencv\build\include\opencv2\hal\defs.h \
-		G:\opencv\build\include\opencv2\core\version.hpp \
-		G:\opencv\build\include\opencv2\core\base.hpp \
-		G:\opencv\build\include\opencv2\core\cvstd.hpp \
-		G:\opencv\build\include\opencv2\core\ptr.inl.hpp \
-		G:\opencv\build\include\opencv2\hal.hpp \
-		G:\opencv\build\include\opencv2\core\sse_utils.hpp \
-		G:\opencv\build\include\opencv2\core\traits.hpp \
-		G:\opencv\build\include\opencv2\core\matx.hpp \
-		G:\opencv\build\include\opencv2\core\types.hpp \
-		G:\opencv\build\include\opencv2\core\mat.hpp \
-		G:\opencv\build\include\opencv2\core\bufferpool.hpp \
-		G:\opencv\build\include\opencv2\core\mat.inl.hpp \
-		G:\opencv\build\include\opencv2\core\persistence.hpp \
-		G:\opencv\build\include\opencv2\core\operations.hpp \
-		G:\opencv\build\include\opencv2\core\cvstd.inl.hpp \
-		G:\opencv\build\include\opencv2\core\utility.hpp \
-		G:\opencv\build\include\opencv2\core\core_c.h \
-		G:\opencv\build\include\opencv2\core\types_c.h \
-		G:\opencv\build\include\opencv2\core\optim.hpp \
-		G:\opencv\build\include\opencv2\imgproc.hpp \
-		G:\opencv\build\include\opencv2\imgproc\imgproc_c.h \
-		G:\opencv\build\include\opencv2\imgproc\types_c.h \
-		G:\opencv\build\include\opencv2\photo.hpp \
-		G:\opencv\build\include\opencv2\photo\photo_c.h \
-		G:\opencv\build\include\opencv2\video.hpp \
-		G:\opencv\build\include\opencv2\video\tracking.hpp \
-		G:\opencv\build\include\opencv2\video\background_segm.hpp \
-		G:\opencv\build\include\opencv2\video\tracking_c.h \
-		G:\opencv\build\include\opencv2\features2d.hpp \
-		G:\opencv\build\include\opencv2\flann\miniflann.hpp \
-		G:\opencv\build\include\opencv2\flann\defines.h \
-		G:\opencv\build\include\opencv2\flann\config.h \
-		G:\opencv\build\include\opencv2\objdetect.hpp \
-		G:\opencv\build\include\opencv2\objdetect\detection_based_tracker.hpp \
-		G:\opencv\build\include\opencv2\objdetect\objdetect_c.h \
-		G:\opencv\build\include\opencv2\calib3d.hpp \
-		G:\opencv\build\include\opencv2\core\affine.hpp \
-		G:\opencv\build\include\opencv2\calib3d\calib3d_c.h \
-		G:\opencv\build\include\opencv2\imgcodecs.hpp \
-		G:\opencv\build\include\opencv2\videoio.hpp \
-		G:\opencv\build\include\opencv2\highgui.hpp \
-		G:\opencv\build\include\opencv2\highgui\highgui_c.h \
-		G:\opencv\build\include\opencv2\imgcodecs\imgcodecs_c.h \
-		G:\opencv\build\include\opencv2\videoio\videoio_c.h \
-		G:\opencv\build\include\opencv2\ml.hpp \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\QFileDialog \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qfiledialog.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\qdir.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\qfileinfo.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qdialog.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\QString \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\QDebug \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\QVector \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtGui\QImage \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtGui\QRgb \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtGui\QPixmap \
 		mainwindow.h
 	C:\Qt\5.5\msvc2013\bin\moc.exe $(DEFINES) -D_MSC_VER=1800 -D_WIN32 -IC:/Qt/5.5/msvc2013/mkspecs/win32-msvc2013 -IC:/Users/Arthur/Documents/OpenCVHW -IG:/opencv/build/include -IC:/Qt/5.5/msvc2013/include -IC:/Qt/5.5/msvc2013/include/QtWidgets -IC:/Qt/5.5/msvc2013/include/QtGui -IC:/Qt/5.5/msvc2013/include/QtANGLE -IC:/Qt/5.5/msvc2013/include/QtCore mainwindow.h -o debug\moc_mainwindow.cpp
 
@@ -318,6 +329,55 @@ compiler_clean: compiler_moc_header_clean compiler_uic_clean
 ####### Compile
 
 debug\main.obj: main.cpp mainwindow.h \
+		G:\opencv\build\include\opencv2\opencv.hpp \
+		G:\opencv\build\include\opencv2\core.hpp \
+		G:\opencv\build\include\opencv2\core\cvdef.h \
+		G:\opencv\build\include\opencv2\hal\defs.h \
+		G:\opencv\build\include\opencv2\core\version.hpp \
+		G:\opencv\build\include\opencv2\core\base.hpp \
+		G:\opencv\build\include\opencv2\core\cvstd.hpp \
+		G:\opencv\build\include\opencv2\core\ptr.inl.hpp \
+		G:\opencv\build\include\opencv2\hal.hpp \
+		G:\opencv\build\include\opencv2\core\sse_utils.hpp \
+		G:\opencv\build\include\opencv2\core\traits.hpp \
+		G:\opencv\build\include\opencv2\core\matx.hpp \
+		G:\opencv\build\include\opencv2\core\types.hpp \
+		G:\opencv\build\include\opencv2\core\mat.hpp \
+		G:\opencv\build\include\opencv2\core\bufferpool.hpp \
+		G:\opencv\build\include\opencv2\core\mat.inl.hpp \
+		G:\opencv\build\include\opencv2\core\persistence.hpp \
+		G:\opencv\build\include\opencv2\core\operations.hpp \
+		G:\opencv\build\include\opencv2\core\cvstd.inl.hpp \
+		G:\opencv\build\include\opencv2\core\utility.hpp \
+		G:\opencv\build\include\opencv2\core\core_c.h \
+		G:\opencv\build\include\opencv2\core\types_c.h \
+		G:\opencv\build\include\opencv2\core\optim.hpp \
+		G:\opencv\build\include\opencv2\imgproc.hpp \
+		G:\opencv\build\include\opencv2\imgproc\imgproc_c.h \
+		G:\opencv\build\include\opencv2\imgproc\types_c.h \
+		G:\opencv\build\include\opencv2\photo.hpp \
+		G:\opencv\build\include\opencv2\photo\photo_c.h \
+		G:\opencv\build\include\opencv2\video.hpp \
+		G:\opencv\build\include\opencv2\video\tracking.hpp \
+		G:\opencv\build\include\opencv2\video\background_segm.hpp \
+		G:\opencv\build\include\opencv2\video\tracking_c.h \
+		G:\opencv\build\include\opencv2\features2d.hpp \
+		G:\opencv\build\include\opencv2\flann\miniflann.hpp \
+		G:\opencv\build\include\opencv2\flann\defines.h \
+		G:\opencv\build\include\opencv2\flann\config.h \
+		G:\opencv\build\include\opencv2\objdetect.hpp \
+		G:\opencv\build\include\opencv2\objdetect\detection_based_tracker.hpp \
+		G:\opencv\build\include\opencv2\objdetect\objdetect_c.h \
+		G:\opencv\build\include\opencv2\calib3d.hpp \
+		G:\opencv\build\include\opencv2\core\affine.hpp \
+		G:\opencv\build\include\opencv2\calib3d\calib3d_c.h \
+		G:\opencv\build\include\opencv2\imgcodecs.hpp \
+		G:\opencv\build\include\opencv2\videoio.hpp \
+		G:\opencv\build\include\opencv2\highgui.hpp \
+		G:\opencv\build\include\opencv2\highgui\highgui_c.h \
+		G:\opencv\build\include\opencv2\imgcodecs\imgcodecs_c.h \
+		G:\opencv\build\include\opencv2\videoio\videoio_c.h \
+		G:\opencv\build\include\opencv2\ml.hpp \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\QMainWindow \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qmainwindow.h \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qwidget.h \
@@ -423,55 +483,17 @@ debug\main.obj: main.cpp mainwindow.h \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtGui\qtouchdevice.h \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qtabwidget.h \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtGui\qicon.h \
-		G:\opencv\build\include\opencv2\opencv.hpp \
-		G:\opencv\build\include\opencv2\core.hpp \
-		G:\opencv\build\include\opencv2\core\cvdef.h \
-		G:\opencv\build\include\opencv2\hal\defs.h \
-		G:\opencv\build\include\opencv2\core\version.hpp \
-		G:\opencv\build\include\opencv2\core\base.hpp \
-		G:\opencv\build\include\opencv2\core\cvstd.hpp \
-		G:\opencv\build\include\opencv2\core\ptr.inl.hpp \
-		G:\opencv\build\include\opencv2\hal.hpp \
-		G:\opencv\build\include\opencv2\core\sse_utils.hpp \
-		G:\opencv\build\include\opencv2\core\traits.hpp \
-		G:\opencv\build\include\opencv2\core\matx.hpp \
-		G:\opencv\build\include\opencv2\core\types.hpp \
-		G:\opencv\build\include\opencv2\core\mat.hpp \
-		G:\opencv\build\include\opencv2\core\bufferpool.hpp \
-		G:\opencv\build\include\opencv2\core\mat.inl.hpp \
-		G:\opencv\build\include\opencv2\core\persistence.hpp \
-		G:\opencv\build\include\opencv2\core\operations.hpp \
-		G:\opencv\build\include\opencv2\core\cvstd.inl.hpp \
-		G:\opencv\build\include\opencv2\core\utility.hpp \
-		G:\opencv\build\include\opencv2\core\core_c.h \
-		G:\opencv\build\include\opencv2\core\types_c.h \
-		G:\opencv\build\include\opencv2\core\optim.hpp \
-		G:\opencv\build\include\opencv2\imgproc.hpp \
-		G:\opencv\build\include\opencv2\imgproc\imgproc_c.h \
-		G:\opencv\build\include\opencv2\imgproc\types_c.h \
-		G:\opencv\build\include\opencv2\photo.hpp \
-		G:\opencv\build\include\opencv2\photo\photo_c.h \
-		G:\opencv\build\include\opencv2\video.hpp \
-		G:\opencv\build\include\opencv2\video\tracking.hpp \
-		G:\opencv\build\include\opencv2\video\background_segm.hpp \
-		G:\opencv\build\include\opencv2\video\tracking_c.h \
-		G:\opencv\build\include\opencv2\features2d.hpp \
-		G:\opencv\build\include\opencv2\flann\miniflann.hpp \
-		G:\opencv\build\include\opencv2\flann\defines.h \
-		G:\opencv\build\include\opencv2\flann\config.h \
-		G:\opencv\build\include\opencv2\objdetect.hpp \
-		G:\opencv\build\include\opencv2\objdetect\detection_based_tracker.hpp \
-		G:\opencv\build\include\opencv2\objdetect\objdetect_c.h \
-		G:\opencv\build\include\opencv2\calib3d.hpp \
-		G:\opencv\build\include\opencv2\core\affine.hpp \
-		G:\opencv\build\include\opencv2\calib3d\calib3d_c.h \
-		G:\opencv\build\include\opencv2\imgcodecs.hpp \
-		G:\opencv\build\include\opencv2\videoio.hpp \
-		G:\opencv\build\include\opencv2\highgui.hpp \
-		G:\opencv\build\include\opencv2\highgui\highgui_c.h \
-		G:\opencv\build\include\opencv2\imgcodecs\imgcodecs_c.h \
-		G:\opencv\build\include\opencv2\videoio\videoio_c.h \
-		G:\opencv\build\include\opencv2\ml.hpp \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\QFileDialog \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qfiledialog.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\qdir.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\qfileinfo.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qdialog.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\QString \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\QDebug \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\QVector \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtGui\QImage \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtGui\QRgb \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtGui\QPixmap \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\QApplication \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qapplication.h \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\qcoreapplication.h \
@@ -481,6 +503,55 @@ debug\main.obj: main.cpp mainwindow.h \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtGui\qinputmethod.h
 
 debug\mainwindow.obj: mainwindow.cpp mainwindow.h \
+		G:\opencv\build\include\opencv2\opencv.hpp \
+		G:\opencv\build\include\opencv2\core.hpp \
+		G:\opencv\build\include\opencv2\core\cvdef.h \
+		G:\opencv\build\include\opencv2\hal\defs.h \
+		G:\opencv\build\include\opencv2\core\version.hpp \
+		G:\opencv\build\include\opencv2\core\base.hpp \
+		G:\opencv\build\include\opencv2\core\cvstd.hpp \
+		G:\opencv\build\include\opencv2\core\ptr.inl.hpp \
+		G:\opencv\build\include\opencv2\hal.hpp \
+		G:\opencv\build\include\opencv2\core\sse_utils.hpp \
+		G:\opencv\build\include\opencv2\core\traits.hpp \
+		G:\opencv\build\include\opencv2\core\matx.hpp \
+		G:\opencv\build\include\opencv2\core\types.hpp \
+		G:\opencv\build\include\opencv2\core\mat.hpp \
+		G:\opencv\build\include\opencv2\core\bufferpool.hpp \
+		G:\opencv\build\include\opencv2\core\mat.inl.hpp \
+		G:\opencv\build\include\opencv2\core\persistence.hpp \
+		G:\opencv\build\include\opencv2\core\operations.hpp \
+		G:\opencv\build\include\opencv2\core\cvstd.inl.hpp \
+		G:\opencv\build\include\opencv2\core\utility.hpp \
+		G:\opencv\build\include\opencv2\core\core_c.h \
+		G:\opencv\build\include\opencv2\core\types_c.h \
+		G:\opencv\build\include\opencv2\core\optim.hpp \
+		G:\opencv\build\include\opencv2\imgproc.hpp \
+		G:\opencv\build\include\opencv2\imgproc\imgproc_c.h \
+		G:\opencv\build\include\opencv2\imgproc\types_c.h \
+		G:\opencv\build\include\opencv2\photo.hpp \
+		G:\opencv\build\include\opencv2\photo\photo_c.h \
+		G:\opencv\build\include\opencv2\video.hpp \
+		G:\opencv\build\include\opencv2\video\tracking.hpp \
+		G:\opencv\build\include\opencv2\video\background_segm.hpp \
+		G:\opencv\build\include\opencv2\video\tracking_c.h \
+		G:\opencv\build\include\opencv2\features2d.hpp \
+		G:\opencv\build\include\opencv2\flann\miniflann.hpp \
+		G:\opencv\build\include\opencv2\flann\defines.h \
+		G:\opencv\build\include\opencv2\flann\config.h \
+		G:\opencv\build\include\opencv2\objdetect.hpp \
+		G:\opencv\build\include\opencv2\objdetect\detection_based_tracker.hpp \
+		G:\opencv\build\include\opencv2\objdetect\objdetect_c.h \
+		G:\opencv\build\include\opencv2\calib3d.hpp \
+		G:\opencv\build\include\opencv2\core\affine.hpp \
+		G:\opencv\build\include\opencv2\calib3d\calib3d_c.h \
+		G:\opencv\build\include\opencv2\imgcodecs.hpp \
+		G:\opencv\build\include\opencv2\videoio.hpp \
+		G:\opencv\build\include\opencv2\highgui.hpp \
+		G:\opencv\build\include\opencv2\highgui\highgui_c.h \
+		G:\opencv\build\include\opencv2\imgcodecs\imgcodecs_c.h \
+		G:\opencv\build\include\opencv2\videoio\videoio_c.h \
+		G:\opencv\build\include\opencv2\ml.hpp \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\QMainWindow \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qmainwindow.h \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qwidget.h \
@@ -586,59 +657,63 @@ debug\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtGui\qtouchdevice.h \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qtabwidget.h \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtGui\qicon.h \
-		G:\opencv\build\include\opencv2\opencv.hpp \
-		G:\opencv\build\include\opencv2\core.hpp \
-		G:\opencv\build\include\opencv2\core\cvdef.h \
-		G:\opencv\build\include\opencv2\hal\defs.h \
-		G:\opencv\build\include\opencv2\core\version.hpp \
-		G:\opencv\build\include\opencv2\core\base.hpp \
-		G:\opencv\build\include\opencv2\core\cvstd.hpp \
-		G:\opencv\build\include\opencv2\core\ptr.inl.hpp \
-		G:\opencv\build\include\opencv2\hal.hpp \
-		G:\opencv\build\include\opencv2\core\sse_utils.hpp \
-		G:\opencv\build\include\opencv2\core\traits.hpp \
-		G:\opencv\build\include\opencv2\core\matx.hpp \
-		G:\opencv\build\include\opencv2\core\types.hpp \
-		G:\opencv\build\include\opencv2\core\mat.hpp \
-		G:\opencv\build\include\opencv2\core\bufferpool.hpp \
-		G:\opencv\build\include\opencv2\core\mat.inl.hpp \
-		G:\opencv\build\include\opencv2\core\persistence.hpp \
-		G:\opencv\build\include\opencv2\core\operations.hpp \
-		G:\opencv\build\include\opencv2\core\cvstd.inl.hpp \
-		G:\opencv\build\include\opencv2\core\utility.hpp \
-		G:\opencv\build\include\opencv2\core\core_c.h \
-		G:\opencv\build\include\opencv2\core\types_c.h \
-		G:\opencv\build\include\opencv2\core\optim.hpp \
-		G:\opencv\build\include\opencv2\imgproc.hpp \
-		G:\opencv\build\include\opencv2\imgproc\imgproc_c.h \
-		G:\opencv\build\include\opencv2\imgproc\types_c.h \
-		G:\opencv\build\include\opencv2\photo.hpp \
-		G:\opencv\build\include\opencv2\photo\photo_c.h \
-		G:\opencv\build\include\opencv2\video.hpp \
-		G:\opencv\build\include\opencv2\video\tracking.hpp \
-		G:\opencv\build\include\opencv2\video\background_segm.hpp \
-		G:\opencv\build\include\opencv2\video\tracking_c.h \
-		G:\opencv\build\include\opencv2\features2d.hpp \
-		G:\opencv\build\include\opencv2\flann\miniflann.hpp \
-		G:\opencv\build\include\opencv2\flann\defines.h \
-		G:\opencv\build\include\opencv2\flann\config.h \
-		G:\opencv\build\include\opencv2\objdetect.hpp \
-		G:\opencv\build\include\opencv2\objdetect\detection_based_tracker.hpp \
-		G:\opencv\build\include\opencv2\objdetect\objdetect_c.h \
-		G:\opencv\build\include\opencv2\calib3d.hpp \
-		G:\opencv\build\include\opencv2\core\affine.hpp \
-		G:\opencv\build\include\opencv2\calib3d\calib3d_c.h \
-		G:\opencv\build\include\opencv2\imgcodecs.hpp \
-		G:\opencv\build\include\opencv2\videoio.hpp \
-		G:\opencv\build\include\opencv2\highgui.hpp \
-		G:\opencv\build\include\opencv2\highgui\highgui_c.h \
-		G:\opencv\build\include\opencv2\imgcodecs\imgcodecs_c.h \
-		G:\opencv\build\include\opencv2\videoio\videoio_c.h \
-		G:\opencv\build\include\opencv2\ml.hpp \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\QFileDialog \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qfiledialog.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\qdir.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\qfileinfo.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qdialog.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\QString \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\QDebug \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\QVector \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtGui\QImage \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtGui\QRgb \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtGui\QPixmap \
 		ui_mainwindow.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\QVariant \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\QAction \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qaction.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qactiongroup.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\QApplication \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qapplication.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\qcoreapplication.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\qeventloop.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtGui\qguiapplication.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtGui\qinputmethod.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\QButtonGroup \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qbuttongroup.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\QHeaderView \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qheaderview.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qabstractitemview.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qabstractscrollarea.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qframe.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\qabstractitemmodel.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\qitemselectionmodel.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qabstractitemdelegate.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qstyleoption.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qabstractspinbox.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtGui\qvalidator.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtCore\qregularexpression.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qslider.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qabstractslider.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qstyle.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qtabbar.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qrubberband.h \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\QLabel \
 		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qframe.h
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\QMenu \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qmenu.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\QMenuBar \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qmenubar.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\QPushButton \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qpushbutton.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qabstractbutton.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\QSlider \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\QStatusBar \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qstatusbar.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\QToolBar \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\qtoolbar.h \
+		..\..\..\..\Qt\5.5\msvc2013\include\QtWidgets\QWidget
 
 debug\moc_mainwindow.obj: debug\moc_mainwindow.cpp 
 

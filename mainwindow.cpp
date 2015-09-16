@@ -13,6 +13,28 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+void MainWindow::on_pushButton_load_clicked()
+{
+    QString fileName = QFileDialog::getOpenFileName(this,tr("Open Image"), "/G:", tr("Image Files (*.png *.jpg *.bmp)"));
+    cv::Mat src = cv::imread(fileName.toStdString());
+
+    int width = src.cols;
+    int height = src.rows;
+    cv::resize(src,src,cv::Size(width,height));
+    this->img = src.clone();
+    this->raw = src.clone();
+    this->showImage(this->img);
+    ui->horizontalSlider_BLUE->setEnabled(1);
+    ui->horizontalSlider_bri->setEnabled(1);
+    ui->horizontalSlider_GREEN->setEnabled(1);
+    ui->horizontalSlider_RED->setEnabled(1);
+    ui->pushButton_blur->setEnabled(1);
+    ui->pushButton_gs->setEnabled(1);
+    ui->pushButton_save->setEnabled(1);
+    ui->pushButton_NI->setEnabled(1);
+    ui->pushButton_save->setEnabled(1);
+    ui->pushButton_clear->setEnabled(1);
+}
 void MainWindow::on_actionLoad_triggered()
 {
     QString fileName = QFileDialog::getOpenFileName(this,tr("Open Image"), "/G:", tr("Image Files (*.png *.jpg *.bmp)"));
@@ -37,8 +59,13 @@ void MainWindow::on_actionLoad_triggered()
 }
 void MainWindow::on_pushButton_clear_clicked()
 {
+    ui->horizontalSlider_BLUE->setValue(0);
+    ui->horizontalSlider_bri->setValue(0);
+    ui->horizontalSlider_GREEN->setValue(0);
+    ui->horizontalSlider_RED->setValue(0);
     this->showImage(this->raw);
     this->img=raw.clone();
+
 }
 QImage MainWindow::Mat2QImage(const cv::Mat src)
 {
@@ -87,27 +114,7 @@ void MainWindow::showImage(const cv::Mat &src)
     ui->image_label->setPixmap(QPixmap::fromImage(this->Mat2QImage(src)));
 }
 
-void MainWindow::on_pushButton_gs_clicked()
-{
-    {
-        cv::Mat src = this->img;
-        cv::Mat dst;
-        dst.create(cv::Size(src.cols,src.rows),CV_8UC1);
-        for(int i = 0 ;i < src.rows ; i++)
-        {
-            for(int j = 0 ;j< src.cols ; j++)
-            {
 
-                    dst.at<uchar>(i,j)
-                            = (src.at<cv::Vec3b>(i,j)[0]
-                            +src.at<cv::Vec3b>(i,j)[1]
-                            +src.at<cv::Vec3b>(i,j)[2])/3;
-
-            }
-        }
-        this->showImage(dst);
-    }
-}
 
 void MainWindow::on_horizontalSlider_bri_valueChanged(int value)
 {
@@ -239,7 +246,25 @@ void MainWindow::on_pushButton_blur_clicked()
         }
         this->showImage(dst);
 }
+void MainWindow::on_pushButton_gs_clicked()
+{
+    {
+        cv::Mat src = this->img;
+        cv::Mat dst;
+        dst.create(cv::Size(src.cols,src.rows),CV_8UC1);
+        for(int i = 0 ;i < src.rows ; i++)
+        {
+            for(int j = 0 ;j < src.cols ; j++)
+            {
 
+                    dst.at<uchar>(i,j)
+                   = (src.at<cv::Vec3b>(i,j)[0]+src.at<cv::Vec3b>(i,j)[1]+src.at<cv::Vec3b>(i,j)[2])/3;
+
+            }
+        }
+        this->showImage(dst);
+    }
+}
 void MainWindow::on_pushButton_save_clicked()
 {
     Mat image=this->img;
@@ -252,7 +277,7 @@ void MainWindow::on_pushButton_NI_clicked()
 //    cv::Mat dst;
 //        dst = this->img.clone();
         cv::Mat src = this->img;
-            cv::Mat dst(src);
+        cv::Mat dst(src);
         for(int i = 0 ;i < this->img.rows ; i++)
         {
             for(int j = 0 ;j< this->img.cols ; j++)
@@ -268,5 +293,7 @@ void MainWindow::on_pushButton_NI_clicked()
         }
         this->showImage(dst);
 }
+
+
 
 
