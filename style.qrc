@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>qdarkstyle/style.qss</file>
+        <file>qdarkstyle/style.qrc</file>
+    </qresource>
+</RCC>

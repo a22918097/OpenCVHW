@@ -210,6 +210,7 @@ Makefile: OpenCVHW.pro ..\..\..\..\Qt\5.5\msvc2013\mkspecs\win32-msvc2013\qmake.
 		..\..\..\..\Qt\5.5\msvc2013\mkspecs\features\lex.prf \
 		OpenCVHW.pro \
 		C:/Qt/5.5/msvc2013/lib/qtmain.prl \
+		C:/Qt/5.5/msvc2013/lib/Qt5PrintSupport.prl \
 		C:/Qt/5.5/msvc2013/lib/Qt5Widgets.prl \
 		C:/Qt/5.5/msvc2013/lib/Qt5Gui.prl \
 		C:/Qt/5.5/msvc2013/lib/Qt5Core.prl
@@ -351,6 +352,7 @@ Makefile: OpenCVHW.pro ..\..\..\..\Qt\5.5\msvc2013\mkspecs\win32-msvc2013\qmake.
 ..\..\..\..\Qt\5.5\msvc2013\mkspecs\features\lex.prf:
 OpenCVHW.pro:
 C:/Qt/5.5/msvc2013/lib/qtmain.prl:
+C:/Qt/5.5/msvc2013/lib/Qt5PrintSupport.prl:
 C:/Qt/5.5/msvc2013/lib/Qt5Widgets.prl:
 C:/Qt/5.5/msvc2013/lib/Qt5Gui.prl:
 C:/Qt/5.5/msvc2013/lib/Qt5Core.prl:

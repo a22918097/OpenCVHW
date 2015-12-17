@@ -9,7 +9,11 @@
 #include <QImage>
 #include <QRgb>
 #include <QPixmap>
-
+#include <QVector>
+#include <QPen>
+#include "qcustomplot.h"
+#include "dialogfuzzylogic.h"
+#include "hw5.h"
 namespace Ui {
 class MainWindow;
 }
@@ -21,6 +25,9 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+    cv::Mat final;
+    cv::Mat finalrel;
+    cv::Mat finalimg;
 
 private slots:
     void on_actionLoad_triggered();
@@ -48,13 +55,62 @@ private slots:
 
     void on_horizontalSlider_Contrast_valueChanged(int value);
 
+    void on_actionExit_triggered();
+
+    void on_pushButton_gs_2_clicked();
+
+    void on_pushButton_du_clicked();
+
+    void on_pushButton_ZO_clicked();
+
+    void on_pushButton_ChangeRes_clicked();
+
+    void on_pushButton_ZI_clicked();
+
+    void on_pushButton_eq__clicked();
+
+
+
+    void on_spinBox_valueChanged(int arg1);
+
+    void on_pushButton_laplacian_clicked();
+
+
+    void on_pushButton_smoothing_clicked();
+
+    void on_pushButton_sobel_clicked();
+
+    void on_pushButton_sobel_2_clicked();
+
+    void on_pushButton_MH_clicked();
+
+    void on_actionFuzzy_triggered();
+
+    void on_pushButton_ZC_clicked();
+
+    void on_actionFourier_triggered();
+
+    void on_pushButton_Fourier_clicked();
+
+    void on_actionIdeal_Filter_triggered();
+
+    void on_pushButton_HW5_clicked();
+
 private:
     Ui::MainWindow *ui;
-    cv::Mat img;
+    cv::Mat temp;
     cv::Mat raw;
-    void changeColor(const cv::Mat &src,cv::Mat &dst,QVector<int> value);
+    cv::Mat src;
+    cv::Mat dst1;
+    cv::Mat save;
     QImage Mat2QImage(const cv::Mat src);
+    void changeColor(const cv::Mat &src,cv::Mat &dst,QVector<int> value);
+
     void showImage(const cv::Mat &src);
+    cv::Mat dst;
+    QVector<double> gray;
+    QVector<double> x;
+    int sum=0;
 };
 
 #endif // MAINWINDOW_H
