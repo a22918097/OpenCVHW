@@ -18,6 +18,7 @@ SOURCES += main.cpp\
     dialogfuzzylogic.cpp \
     qsmartlabel.cpp \
     hw5.cpp \
+    hw6.cpp
 
 
 HEADERS  += mainwindow.h \
@@ -25,11 +26,14 @@ HEADERS  += mainwindow.h \
     dialogfuzzylogic.h \
     qsmartlabel.h \
     hw5.h \
+    hw6.h
 
 
-FORMS    += mainwindow.ui \
+FORMS    += \
     dialogfuzzylogic.ui \
-    hw5.ui
+    hw5.ui \
+    hw6.ui \
+    mainwindow.ui
 
 
 OpenCV_Lib = $$quote(G:\opencv\build\x86\vc11\lib)

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>hw6</class>
+ <widget class="QDialog" name="hw6">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1900</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label_main">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>30</y>
+     <width>800</width>
+     <height>800</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>30</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Source Image</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_disp">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>30</y>
+     <width>800</width>
+     <height>800</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>30</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Display</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_trap">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>840</y>
+     <width>161</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Trapezoidal</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_wavy">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>840</y>
+     <width>120</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Wavy</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_circular">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>840</y>
+     <width>120</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Circular</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Hough">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>840</y>
+     <width>120</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Hough</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -83,6 +83,7 @@ void MainWindow::on_pushButton_load_clicked()
     ui->pushButton_du->setEnabled(1);
     ui->pushButton_ChangeRes->setEnabled(1);
     ui->pushButton_HW5->setEnabled(1);
+    ui->pushButton_HW6->setEnabled(1);
 }
 void MainWindow::on_actionLoad_triggered()
 {
@@ -812,18 +813,36 @@ void MainWindow::on_spinBox_valueChanged(int arg1)
     }
 }
 
+void MainWindow::on_pushButton_threshold_clicked()
+{
+    cv::Mat temp;
+    temp.create(dst.rows,dst.cols,CV_8UC1);
+    cv::cvtColor(dst,temp,CV_RGB2GRAY);
+    for(int i=0;i<temp.rows;i++)
+    {
+        for(int j=0;j<temp.cols;j++)
+        {
+            if(temp.at<uchar>(i,j)>ui->horizontalSlider_threshold->value())
+                temp.at<uchar>(i,j)=255;
+            else
+                temp.at<uchar>(i,j)=0;
+        }
+
+    }
+    dst=temp;
+//    imshow("dst",dst);
+}
+
 void MainWindow::on_pushButton_laplacian_clicked()
 {
     cv::Mat test;
 
     test.create(cv::Size(dst.cols,dst.rows),CV_8UC1);
-    for(int i=0;i<dst.rows;i++)
-    {
-        for (int j=0;j<dst.cols;j++)
-        {
-            test.at<uchar>(i,j)=dst.at<Vec3b>(i,j)[0];
-        }
+    if(dst.channels()!=1){
+        cv::cvtColor(dst,dst,CV_RGB2GRAY);
     }
+    else
+        test=dst.clone();
     int sum=0;
     int count=0;
     int val;
@@ -865,7 +884,7 @@ void MainWindow::on_pushButton_laplacian_clicked()
             {
                 for(int n=((ui->spinBox->text().toInt()-1)/-2);n<=((ui->spinBox->text().toInt()-1)/2);n++)
                 {
-                    val=val+mask[k]*dst.at<Vec3b>(i+m,j+n)[1];
+                    val=val+mask[k]*dst.at<uchar>(i+m,j+n);
                     k++;
                 }
             }
@@ -874,16 +893,19 @@ void MainWindow::on_pushButton_laplacian_clicked()
 
         }
     }
-    for(int i=0;i<test.rows;i++)
-    {
-        for(int j=0;j<test.cols;j++)
-        {
-            test.at<uchar>(i,j)=test.at<uchar>(i,j);
-        }
 
-    }
+//    for(int i=0;i<test.rows;i++)
+//    {
+//        for(int j=0;j<test.cols;j++)
+//        {
+//            test.at<uchar>(i,j)=test.at<uchar>(i,j);
+//        }
+
+//    }
     delete [] mask;
+
     dst=test.clone();
+
     //this->showImage(dst);
     imshow("dst",test);
     save=dst.clone();
@@ -1775,12 +1797,20 @@ void MainWindow::on_actionIdeal_Filter_triggered()
 
 
 }
-
-
-
 void MainWindow::on_pushButton_HW5_clicked()
 {
     hw5 hahaha;
     hahaha.readImage(src);
     hahaha.exec();
 }
+
+void MainWindow::on_pushButton_HW6_clicked()
+{
+    hw6 ha;
+    ui->pushButton_threshold->click();
+    ui->pushButton_laplacian->click();
+    ha.recieveimage(dst);
+    ha.readImage(src);
+    ha.exec();
+}
+

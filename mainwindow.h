@@ -14,6 +14,7 @@
 #include "qcustomplot.h"
 #include "dialogfuzzylogic.h"
 #include "hw5.h"
+#include "hw6.h"
 namespace Ui {
 class MainWindow;
 }
@@ -95,6 +96,11 @@ private slots:
     void on_actionIdeal_Filter_triggered();
 
     void on_pushButton_HW5_clicked();
+
+
+    void on_pushButton_HW6_clicked();
+
+    void on_pushButton_threshold_clicked();
 
 private:
     Ui::MainWindow *ui;

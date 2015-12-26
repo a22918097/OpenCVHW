@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[35];
-    char stringdata0[919];
+    QByteArrayData data[37];
+    char stringdata0[977];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -63,7 +63,9 @@ QT_MOC_LITERAL(30, 779, 24), // "on_pushButton_ZC_clicked"
 QT_MOC_LITERAL(31, 804, 26), // "on_actionFourier_triggered"
 QT_MOC_LITERAL(32, 831, 29), // "on_pushButton_Fourier_clicked"
 QT_MOC_LITERAL(33, 861, 31), // "on_actionIdeal_Filter_triggered"
-QT_MOC_LITERAL(34, 893, 25) // "on_pushButton_HW5_clicked"
+QT_MOC_LITERAL(34, 893, 25), // "on_pushButton_HW5_clicked"
+QT_MOC_LITERAL(35, 919, 25), // "on_pushButton_HW6_clicked"
+QT_MOC_LITERAL(36, 945, 31) // "on_pushButton_threshold_clicked"
 
     },
     "MainWindow\0on_actionLoad_triggered\0\0"
@@ -96,7 +98,9 @@ QT_MOC_LITERAL(34, 893, 25) // "on_pushButton_HW5_clicked"
     "on_actionFourier_triggered\0"
     "on_pushButton_Fourier_clicked\0"
     "on_actionIdeal_Filter_triggered\0"
-    "on_pushButton_HW5_clicked"
+    "on_pushButton_HW5_clicked\0"
+    "on_pushButton_HW6_clicked\0"
+    "on_pushButton_threshold_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -106,7 +110,7 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      31,   14, // methods
+      33,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -114,37 +118,39 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,  169,    2, 0x08 /* Private */,
-       3,    0,  170,    2, 0x08 /* Private */,
-       4,    1,  171,    2, 0x08 /* Private */,
-       6,    1,  174,    2, 0x08 /* Private */,
-       7,    1,  177,    2, 0x08 /* Private */,
-       8,    1,  180,    2, 0x08 /* Private */,
-       9,    0,  183,    2, 0x08 /* Private */,
-      10,    0,  184,    2, 0x08 /* Private */,
-      11,    0,  185,    2, 0x08 /* Private */,
-      12,    0,  186,    2, 0x08 /* Private */,
-      13,    0,  187,    2, 0x08 /* Private */,
-      14,    1,  188,    2, 0x08 /* Private */,
-      15,    0,  191,    2, 0x08 /* Private */,
-      16,    0,  192,    2, 0x08 /* Private */,
-      17,    0,  193,    2, 0x08 /* Private */,
-      18,    0,  194,    2, 0x08 /* Private */,
-      19,    0,  195,    2, 0x08 /* Private */,
-      20,    0,  196,    2, 0x08 /* Private */,
-      21,    0,  197,    2, 0x08 /* Private */,
-      22,    1,  198,    2, 0x08 /* Private */,
-      24,    0,  201,    2, 0x08 /* Private */,
-      25,    0,  202,    2, 0x08 /* Private */,
-      26,    0,  203,    2, 0x08 /* Private */,
-      27,    0,  204,    2, 0x08 /* Private */,
-      28,    0,  205,    2, 0x08 /* Private */,
-      29,    0,  206,    2, 0x08 /* Private */,
-      30,    0,  207,    2, 0x08 /* Private */,
-      31,    0,  208,    2, 0x08 /* Private */,
-      32,    0,  209,    2, 0x08 /* Private */,
-      33,    0,  210,    2, 0x08 /* Private */,
-      34,    0,  211,    2, 0x08 /* Private */,
+       1,    0,  179,    2, 0x08 /* Private */,
+       3,    0,  180,    2, 0x08 /* Private */,
+       4,    1,  181,    2, 0x08 /* Private */,
+       6,    1,  184,    2, 0x08 /* Private */,
+       7,    1,  187,    2, 0x08 /* Private */,
+       8,    1,  190,    2, 0x08 /* Private */,
+       9,    0,  193,    2, 0x08 /* Private */,
+      10,    0,  194,    2, 0x08 /* Private */,
+      11,    0,  195,    2, 0x08 /* Private */,
+      12,    0,  196,    2, 0x08 /* Private */,
+      13,    0,  197,    2, 0x08 /* Private */,
+      14,    1,  198,    2, 0x08 /* Private */,
+      15,    0,  201,    2, 0x08 /* Private */,
+      16,    0,  202,    2, 0x08 /* Private */,
+      17,    0,  203,    2, 0x08 /* Private */,
+      18,    0,  204,    2, 0x08 /* Private */,
+      19,    0,  205,    2, 0x08 /* Private */,
+      20,    0,  206,    2, 0x08 /* Private */,
+      21,    0,  207,    2, 0x08 /* Private */,
+      22,    1,  208,    2, 0x08 /* Private */,
+      24,    0,  211,    2, 0x08 /* Private */,
+      25,    0,  212,    2, 0x08 /* Private */,
+      26,    0,  213,    2, 0x08 /* Private */,
+      27,    0,  214,    2, 0x08 /* Private */,
+      28,    0,  215,    2, 0x08 /* Private */,
+      29,    0,  216,    2, 0x08 /* Private */,
+      30,    0,  217,    2, 0x08 /* Private */,
+      31,    0,  218,    2, 0x08 /* Private */,
+      32,    0,  219,    2, 0x08 /* Private */,
+      33,    0,  220,    2, 0x08 /* Private */,
+      34,    0,  221,    2, 0x08 /* Private */,
+      35,    0,  222,    2, 0x08 /* Private */,
+      36,    0,  223,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -167,6 +173,8 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int,   23,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -219,6 +227,8 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 28: _t->on_pushButton_Fourier_clicked(); break;
         case 29: _t->on_actionIdeal_Filter_triggered(); break;
         case 30: _t->on_pushButton_HW5_clicked(); break;
+        case 31: _t->on_pushButton_HW6_clicked(); break;
+        case 32: _t->on_pushButton_threshold_clicked(); break;
         default: ;
         }
     }
@@ -249,13 +259,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 31)
+        if (_id < 33)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 31;
+        _id -= 33;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 31)
+        if (_id < 33)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 31;
+        _id -= 33;
     }
     return _id;
 }
