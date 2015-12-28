@@ -14,7 +14,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->setupUi(this);
     ui->pushButton_ZC->setVisible(0);
+    ui->pushButton_threshold->setVisible(0);
+    ui->horizontalSlider_threshold->setVisible(0);
     ui->customPlot->setVisible(0);
+    ui->pushButton_Fourier->setEnabled(0);
     setFixedSize(1905,1000);
     ui->tableWidget->setColumnCount(ui->spinBox->text().toInt());
     ui->tableWidget->setRowCount(ui->spinBox->text().toInt());
@@ -84,6 +87,7 @@ void MainWindow::on_pushButton_load_clicked()
     ui->pushButton_ChangeRes->setEnabled(1);
     ui->pushButton_HW5->setEnabled(1);
     ui->pushButton_HW6->setEnabled(1);
+    ui->pushButton_Fourier->setEnabled(1);
 }
 void MainWindow::on_actionLoad_triggered()
 {

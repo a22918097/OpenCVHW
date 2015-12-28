@@ -186,21 +186,49 @@ void hw6::on_pushButton_Hough_clicked()
 {
     cv::Mat final;
     cv::Mat ltplane;
-    int l;
+    int l,checkvalue;;
     cv::Mat img;
+    cv::Mat grayimg;
+    int areapixel=0,perimeterpixel=0;
+    double area=0,perimeter=0;
     img.create(receive.rows,receive.cols,CV_8UC3);
     img=originImg.clone();
+    grayimg.create(receive.rows,receive.cols,CV_8UC1);
     final=receive.clone();
+    for(int i=0;i<grayimg.rows;i++)
+    {
+        for(int j=0;j<grayimg.cols;j++)
+            grayimg.at<uchar>(i,j)=(originImg.at<cv::Vec3b>(i,j)[0]+
+                    originImg.at<cv::Vec3b>(i,j)[1]+
+                    originImg.at<cv::Vec3b>(i,j)[2])/3;
+
+    }
+    for(int i=0;i<grayimg.rows;i++)
+    {
+        for(int j=0;j<grayimg.cols;j++)
+        {
+            if(grayimg.at<uchar>(i,j)>125)
+            {
+                grayimg.at<uchar>(i,j)=255;
+                areapixel++;
+            }
+            else
+                grayimg.at<uchar>(i,j)=0;
+        }
+
+    }
+    imshow("grayimg",grayimg);
     ltplane.create(1.414*final.rows*2,180,CV_8UC1);
     ltplane=ltplane.zeros(cv::Size(ltplane.cols,ltplane.rows),CV_8UC1);
-    //    imshow("ltplane",ltplane);
-    //    imshow("final",final);
     for(int i=0;i<final.rows;i++){
         for(int j=0;j<final.cols;j++)
         {
             if(final.at<uchar>(i,j)>70)
                 if(final.at<uchar>(i,j)>125)
+                {
                     final.at<uchar>(i,j)=255;
+                    areapixel++;
+                }
                 else
                     final.at<uchar>(i,j)=0;
         }
@@ -219,9 +247,17 @@ void hw6::on_pushButton_Hough_clicked()
             }
         }
     }
+    for(int i=0;i<final.rows;i++)
+    {
+        for(int j=0;j<final.cols;j++)
+        {
+            if(final.at<uchar>(i,j)==255)
+                perimeterpixel++;
+        }
+    }
 
-    int max[20],maxi[20],maxj[20],k=0;
-    for(int i=0;i<20;i++){
+    int max[10],maxi[10],maxj[10],k=0;
+    for(int i=0;i<10;i++){
         max[i]=0;
         maxi[i]=0;
         maxj[i]=0;
@@ -233,8 +269,7 @@ void hw6::on_pushButton_Hough_clicked()
         for(int j=0;j< ltplane.cols;j++)
         {
 
-            if(ltplane.at<uchar>(i,j)>80){
-                qDebug() << "me";
+            if(ltplane.at<uchar>(i,j)>83){
                 max[k]=ltplane.at<uchar>(i,j);
                 maxi[k]=i-ltplane.rows/2;
                 maxj[k]=j-90;
@@ -243,29 +278,34 @@ void hw6::on_pushButton_Hough_clicked()
             }
         }
     }
-    //for(int k=0;k<20;k++){
-    //  qDebug()<<max[k]<<maxi[k]<<maxj[k];
-    //}
-    qDebug() << img.channels();
-    int check;
+
     for(int i=0;i<final.rows;i++)
     {
         for(int j=0;j<final.cols;j++)
         {
-            for(int k=0;k<20;k++)
+            for(int k=0;k<10;k++)
             {
 
                 if(max[k]!=0){
-                    check=i*cos(maxj[k]*3.14/180)+j*sin(maxj[k]*3.14/180);
-                    if(check==maxi[k]){
-                        img.at<cv::Vec3b>(i,j)[2]=255;
+                    checkvalue=i*cos(maxj[k]*3.14/180)+j*sin(maxj[k]*3.14/180);
+                    if(checkvalue==maxi[k]){
+                        img.at<cv::Vec3b>(i,j)[2]=10;
+                        img.at<cv::Vec3b>(i,j)[1]=186;
+                        img.at<cv::Vec3b>(i,j)[0]=181;
                     }
                 }
-                if(i==511&&j==511&&k==19)
-                    qDebug() << maxi[19] << check;
             }
         }
     }
+
+    qDebug() <<"areapixel" << areapixel;
+    qDebug() <<"perimeterpixel" << perimeterpixel;
+    area=areapixel*0.25/100.0;
+    perimeter=(double)perimeterpixel/0.5/10.0;
+    ui->textBrowser->setStyleSheet("font:18pt");
+    ui->textBrowser->setText("Area = "+QString::number(area)+"    CM^2\n"+
+                             "Perimeter = " +QString::number(perimeter)+"    CM");
+
     imshow("ltplane",ltplane);
     ui->label_disp->setPixmap(QPixmap::fromImage(M2Q(img)));
 }

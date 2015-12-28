@@ -17,6 +17,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QTextBrowser>
 
 QT_BEGIN_NAMESPACE
 
@@ -29,6 +30,7 @@ public:
     QPushButton *pushButton_wavy;
     QPushButton *pushButton_circular;
     QPushButton *pushButton_Hough;
+    QTextBrowser *textBrowser;
 
     void setupUi(QDialog *hw6)
     {
@@ -44,7 +46,7 @@ public:
         label_main->setAlignment(Qt::AlignCenter);
         label_disp = new QLabel(hw6);
         label_disp->setObjectName(QStringLiteral("label_disp"));
-        label_disp->setGeometry(QRect(950, 30, 800, 800));
+        label_disp->setGeometry(QRect(960, 30, 800, 800));
         label_disp->setFont(font);
         label_disp->setAlignment(Qt::AlignCenter);
         pushButton_trap = new QPushButton(hw6);
@@ -65,6 +67,13 @@ public:
         pushButton_Hough->setObjectName(QStringLiteral("pushButton_Hough"));
         pushButton_Hough->setGeometry(QRect(710, 840, 120, 120));
         pushButton_Hough->setFont(font1);
+        textBrowser = new QTextBrowser(hw6);
+        textBrowser->setObjectName(QStringLiteral("textBrowser"));
+        textBrowser->setGeometry(QRect(880, 841, 231, 141));
+        QFont font2;
+        font2.setFamily(QStringLiteral("Adobe Devanagari"));
+        font2.setPointSize(12);
+        textBrowser->setFont(font2);
 
         retranslateUi(hw6);
 
